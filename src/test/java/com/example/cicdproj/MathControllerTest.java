@@ -7,6 +7,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -25,6 +26,11 @@ public class MathControllerTest {
         Integer expected = 7;
         Integer actual = this.restTemplate.getForObject("http://localhost:" + port + "/add/4/3",Integer.class);
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void otherTest(){
+        fail("not yet implemented");
     }
 
 }
