@@ -28,10 +28,4 @@ public class MathControllerTest {
         Integer actual = this.restTemplate.getForObject("http://localhost:" + port + "/add/4/3",Integer.class);
         assertEquals(expected, actual);
     }
-
-    @Test
-    public void otherTest(){
-        assertTrue(true);
-    }
-
 }
